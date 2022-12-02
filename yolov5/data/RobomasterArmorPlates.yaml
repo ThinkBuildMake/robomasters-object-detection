@@ -3,7 +3,7 @@ val:  ../../images/val/
 test: ../../images/test/
 
 # number of classes
-nc: # Unknown for now
+nc: 2
 
 # class names
-names: # Unknown for now
+names: ["Red Light", "Blue Light"]
