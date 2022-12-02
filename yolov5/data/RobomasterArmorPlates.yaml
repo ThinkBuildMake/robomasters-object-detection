@@ -1,0 +1,9 @@
+train: ../../images/train/ 
+val:  ../../images/val/
+test: ../../images/test/
+
+# number of classes
+nc: # Unknown for now
+
+# class names
+names: # Unknown for now
