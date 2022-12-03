@@ -49,7 +49,9 @@ def extract_info_from_xml(xml_file):
 
 # Dictionary that maps class names to IDs
 class_name_to_id_mapping = {"Red Light": 0,
-                           "Blue Light": 1}
+                           "Blue Light": 1,
+                           "Blue Plate": 2,
+                           "Red Plate": 3}
 
 # Convert the info dict to the required yolo format and write it to disk
 def convert_to_yolov5(info_dict):
