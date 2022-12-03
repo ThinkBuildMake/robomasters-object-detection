@@ -111,8 +111,15 @@ def move_files_to_folder(list_of_files, destination_folder):
             print(f)
             assert False
 
+os.mkdir("images/train")
+os.mkdir("images/val")
+os.mkdir("images/test")
+os.mkdir("labels/train")
+os.mkdir("labels/val")
+os.mkdir("labels/test")
+
 # Move the splits into their folders
-move_files_to_folder(train_images, 'images/train')
+move_files_to_folder(train_images, 'images/train/')
 move_files_to_folder(val_images, 'images/val/')
 move_files_to_folder(test_images, 'images/test/')
 move_files_to_folder(train_annotations, 'labels/train/')
