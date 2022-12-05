@@ -23,7 +23,7 @@ cam_feed.set(cv2.CAP_PROP_FRAME_HEIGHT, 1000)
 while True:    
     # yolo detection
     ret, img = cam_feed.read()   
-    pred = model(img, size=640)
+    pred = model(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), size=640)
 
     output_img = pred.render()[0]
 
@@ -37,7 +37,7 @@ while True:
         cv2.circle(output_img, [int(xpred), int(ypred)], 10, color=(0, 165, 255), thickness=3)
         
     # display the frame
-    cv2.imshow("", output_img)     
+    cv2.imshow("", cv2.cvtColor(output_img, cv2.COLOR_RGB2BGR))     
     
     if (cv2.waitKey(1) & 0xFF == ord("q")) or (cv2.waitKey(1)==27):
         break
